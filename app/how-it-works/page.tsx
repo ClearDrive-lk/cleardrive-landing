@@ -11,7 +11,7 @@ const steps = [
     action: "Explore",
     icon: <Search className="w-5 h-5 text-blue-400" />,
     // using placeholder images - replace 'src' with your actual local images
-    image: "Browse and select.jpg", 
+    image: "/browse-and-select.jpg", 
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const steps = [
     description: "Get transparent pricing including import and registration fees.",
     action: "Calculate",
     icon: <Calculator className="w-5 h-5 text-blue-400" />,
-    image: "calculate cost.jpg",
+    image: "/calculate-cost.jpg",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const steps = [
     description: "Select from multiple secure payment options.",
     action: "Pay",
     icon: <CreditCard className="w-5 h-5 text-blue-400" />,
-    image: "Choose payment.jpg",
+    image: "/choose-payment.jpg",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const steps = [
     description: "Monitor your vehicle's journey and receive it within 30 days.",
     action: "Track",
     icon: <Ship className="w-5 h-5 text-blue-400" />,
-    image: "Track and recieve.jpg",
+    image: "/track-and-recieve.jpg",
   },
 ];
 
