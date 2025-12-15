@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   Ship,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface Feature {
   id: number;
@@ -20,107 +21,115 @@ const features: Feature[] = [
     id: 1,
     title: "True Cost Transparency",
     description:
-      'No hidden markups. Our real-time Landed Cost Calculator shows CIF, Customs Duty, PAL, and CESS before you bid.',
+      "Know the exact landed cost before you bid. Our real-time calculator breaks down CIF, Customs Duty, PAL, and CESS with zero hidden fees.",
     icon: Calculator,
   },
   {
     id: 2,
     title: "Direct Auction Access",
     description:
-      "Bid directly at Japanese auction houses with verified auction sheets — no middlemen involved.",
+      "Browse verified Japanese auction listings directly and place bids with confidence using authentic auction sheets.",
     icon: Globe,
   },
   {
     id: 3,
     title: "Digital Customs Clearance",
     description:
-      "Track clearance progress live and view audited duty receipts from your assigned clearing agent.",
+      "Track customs clearance live with audited receipts, milestone updates, and full transparency from your assigned agent.",
     icon: FileCheck,
   },
   {
     id: 4,
     title: "Integrated Financing",
     description:
-      "Apply for leasing securely through our platform and get approvals from top finance partners.",
+      "Apply for leasing securely on the platform and receive approvals from trusted finance partners—no bank visits required.",
     icon: CreditCard,
   },
   {
     id: 5,
     title: "Verified Partners",
     description:
-      "All importers and clearing agents undergo strict compliance and verification checks.",
+      "Every importer and clearing agent is carefully vetted through compliance checks and ongoing audits.",
     icon: ShieldCheck,
   },
   {
     id: 6,
     title: "End-to-End Tracking",
     description:
-      "Monitor your vehicle journey from Japan to Sri Lankan port — all in one dashboard.",
+      "Monitor your vehicle journey from Japan to Sri Lanka with a single, real-time shipment dashboard.",
     icon: Ship,
   },
 ];
 
-const FeaturesSection: React.FC = () => {
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.12 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
+export default function FeaturesSection() {
   return (
     <section
       id="features"
-      className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white py-24"
+      className="relative py-24 bg-gradient-to-b from-slate-50 to-white"
     >
-      {/* Decorative background blur */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-blue-200/40 blur-3xl" />
-      </div>
-
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="mx-auto max-w-3xl text-center mb-20">
-          <span className="inline-flex items-center rounded-full bg-blue-100 px-4 py-1 text-sm font-semibold text-blue-700">
-            Why ClearDrive.lk
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <span className="inline-block mb-4 rounded-full bg-blue-100 px-4 py-1 text-sm font-semibold text-blue-700">
+            Why ClearDrive
           </span>
-
-          <h2 className="mt-6 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-            A smarter way to import vehicles
+          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+            Import vehicles with
+            <span className="text-blue-600"> clarity & confidence</span>
           </h2>
-
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            We replace brokers, paperwork, and uncertainty with a single
-            transparent, audited digital platform.
+          <p className="mt-6 text-lg text-slate-600">
+            ClearDrive replaces brokers, paperwork, and uncertainty with a
+            single secure platform built for transparency, trust, and speed.
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Feature Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+        >
           {features.map((feature) => {
             const Icon = feature.icon;
-
             return (
-              <div
+              <motion.div
                 key={feature.id}
-                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                variants={cardVariants}
+                className="group relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                {/* Icon */}
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-md shadow-blue-500/30 transition-transform duration-300 group-hover:scale-110">
-                  <Icon className="h-7 w-7 text-white" />
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/20">
+                  <Icon className="h-7 w-7" />
                 </div>
 
-                {/* Content */}
-                <h3 className="mt-6 text-xl font-semibold text-gray-900">
+                <h3 className="mt-6 text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                   {feature.title}
                 </h3>
 
-                <p className="mt-3 text-gray-600 leading-relaxed">
+                <p className="mt-3 text-slate-600 leading-relaxed">
                   {feature.description}
                 </p>
 
-                {/* Hover border glow */}
-                <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-transparent transition group-hover:ring-blue-500/20" />
-              </div>
+                <div className="absolute inset-x-0 bottom-0 h-1 rounded-b-2xl bg-gradient-to-r from-blue-500 to-indigo-500 opacity-0 transition-opacity group-hover:opacity-100" />
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
-};
-
-export default FeaturesSection;
+}
