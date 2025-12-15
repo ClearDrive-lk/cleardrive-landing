@@ -94,9 +94,18 @@ export default function Footer() {
               Submit
             </button>
           </form>
-          <p className="text-xs text-zinc-500 mt-2">
-            By subscribing, you agree to our privacy policy and email terms
-          </p>
+
+          {/* Added Checkbox Section */}
+          <label className="flex items-start gap-3 text-xs text-zinc-500 mt-2 cursor-pointer hover:text-zinc-700 transition-colors">
+            <input
+              type="checkbox"
+              className="accent-orange-500 mt-1 shrink-0"
+              required
+            />
+            <span>
+              I acknowledge that ClearDrive.lk is an academic SDGP project and agree to be contacted.
+            </span>
+          </label>
         </div>
       </div>
 
