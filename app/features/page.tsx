@@ -1,4 +1,9 @@
+"use client";
+
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 import {
   Calculator,
   Globe,
@@ -7,7 +12,7 @@ import {
   ShieldCheck,
   Ship,
 } from "lucide-react";
-import { motion } from "framer-motion";
+
 
 interface Feature {
   id: number;
