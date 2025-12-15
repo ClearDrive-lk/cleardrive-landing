@@ -9,11 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
-<<<<<<< HEAD
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-=======
->>>>>>> 287dd6fb719c4cbb75a231d3ad1a42579d2da7a7
     "lucide-react": "^0.561.0",
     "next": "16.0.10",
     "react": "19.2.1",
