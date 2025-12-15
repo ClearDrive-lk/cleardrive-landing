@@ -6,5 +6,11 @@ html,
 body {
   background-color: #000000;
   color: #eeeeee;
+  
+}
+:root {
   accent-color: #FE7743;
 }
+
+
+
