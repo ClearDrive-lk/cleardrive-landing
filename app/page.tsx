@@ -13,7 +13,7 @@ export default function HomePage() {
         </p>
 
         <a
-          href="https://forms.gle/YOUR_FORM_LINK"
+          href="https://forms.gle/MbQyLqrmsEXZLKXL8"
           target="_blank"
           className="bg-[#FE7743] text-black px-6 py-3 rounded-xl font-semibold w-fit"
         >
