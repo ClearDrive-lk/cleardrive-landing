@@ -3,33 +3,49 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <div className="w-full flex justify-center px-4 py-6">
-      <nav className="flex w-full max-w-6xl items-center justify-between rounded-2xl border border-[#FE7743] bg-white shadow-[0_8px_24px_rgba(0,0,0,0.25)] px-6">
+    <div className="w-full flex justify-center px-4 py-4 md:py-6 bg-white/80 backdrop-blur">
+      <nav className="flex w-full max-w-6xl items-center justify-between rounded-2xl border border-[#FE7743] bg-[#FFFFFF] shadow-[0_12px_30px_rgba(0,0,0,0.35)] px-4 md:px-8 py-3">
         
-        {/* Left: Logo image */}
-        <Link href="/" className="flex items-center gap-3">
-          <Image
-            src="/logo.png" // place logo.png inside your public/ folder
-            alt="ClearDrive.lk Logo"
-            width={180}      // Increased size of the logo
-            height={70}      // Increased height for better scaling
-            priority
-          />
+        {/* Left: Logo */}
+        <Link href="/" className="flex items-center gap-3 shrink-0 group">
+          <div className="rounded-full bg-[linear-gradient(to_right,_#000000_0%,_#000000_65%,_#ffffff_100%)] pl-3 pr-6 py-1 shadow-sm overflow-hidden">
+            <div className="bg-black rounded-full px-2 py-1">
+              <Image
+                src="/logo.png"
+                alt="ClearDrive.lk Logo"
+                width={170}
+                height={60}
+                priority
+              />
+            </div>
+          </div>
         </Link>
 
-        {/* Middle: Nav links */}
+        {/* Centered Nav Links with spacing */}
         <div className="flex-1 flex justify-center">
-          <div className="flex items-center gap-12 text-black text-sm">
-            <Link href="/how-it-works" className="font-medium text-black hover:text-[#FFFFFF]">
+          <div className="flex items-center gap-12 text-sm font-semibold">
+            <Link
+              href="/how-it-works"
+              className="text-black transition-colors duration-150 hover:text-[#FE7743] hover:border-b-2 hover:border-[#FE7743] pb-0.5"
+            >
               How It Works
             </Link>
-            <Link href="/features" className="font-medium text-black hover:text-[#FFFFFF]">
+            <Link
+              href="/features"
+              className="text-black transition-colors duration-150 hover:text-[#FE7743] hover:border-b-2 hover:border-[#FE7743] pb-0.5"
+            >
               Features
             </Link>
-            <Link href="/about" className="font-medium text-black hover:text-[#FFFFFF]">
+            <Link
+              href="/about"
+              className="text-black transition-colors duration-150 hover:text-[#FE7743] hover:border-b-2 hover:border-[#FE7743] pb-0.5"
+            >
               About
             </Link>
-            <Link href="/contact" className="font-medium text-black hover:text-[#FFFFFF]">
+            <Link
+              href="/contact"
+              className="text-black transition-colors duration-150 hover:text-[#FE7743] hover:border-b-2 hover:border-[#FE7743] pb-0.5"
+            >
               Contact Us
             </Link>
           </div>
