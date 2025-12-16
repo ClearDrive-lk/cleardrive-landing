@@ -104,10 +104,10 @@ export default function Footer() {
           {/* Right Side: Icons + Brand */}
           <div className="flex items-center gap-8">
             <div className="flex gap-4 text-black">
-              <Link href="#" aria-label="Facebook"><Facebook size={18} /></Link>
-              <Link href="#" aria-label="Instagram"><Instagram size={18} /></Link>
+              <Link href="https://www.facebook.com/profile.php?id=61583815894113" aria-label="Facebook"><Facebook size={18} /></Link>
+              <Link href="https://www.instagram.com/cleardrivelk/" aria-label="Instagram"><Instagram size={18} /></Link>
               <Link href="#" aria-label="X"><Twitter size={18} /></Link>
-              <Link href="#" aria-label="LinkedIn"><Linkedin size={18} /></Link>
+              <Link href="https://www.linkedin.com/company/clear-drive-lk/" aria-label="LinkedIn"><Linkedin size={18} /></Link>
               <Link href="#" aria-label="YouTube"><Youtube size={18} /></Link>
             </div>
             <span className="font-bold text-slate-700 text-sm">ClearDrive.lk</span>

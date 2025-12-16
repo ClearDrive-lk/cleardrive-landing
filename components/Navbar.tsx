@@ -3,18 +3,18 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <div className="w-full flex justify-center px-4 py-4 md:py-6 bg-white/80 backdrop-blur">
-      <nav className="flex w-full max-w-6xl items-center justify-between rounded-2xl border border-[#FE7743] bg-[#FFFFFF] shadow-[0_12px_30px_rgba(0,0,0,0.35)] px-4 md:px-8 py-3">
+    <div className="w-full flex justify-center px-2 py-1 md:py-2 bg-white/80 backdrop-blur">
+      <nav className="flex w-full max-w-7xl items-center justify-between rounded-lg border border-[#FE7743] bg-[#FFFFFF] shadow-[0_4px_12px_rgba(0,0,0,0.2)] px-3 md:px-5 py-1.5">
         
         {/* Left: Logo */}
-        <Link href="/" className="flex items-center gap-3 shrink-0 group">
-          <div className="rounded-full bg-[linear-gradient(to_right,_#000000_0%,_#000000_65%,_#ffffff_100%)] pl-3 pr-6 py-1 shadow-sm overflow-hidden">
-            <div className="bg-black rounded-full px-2 py-1">
+        <Link href="/" className="flex items-center gap-1.5 shrink-0 group">
+          <div className="rounded-full bg-[linear-gradient(to_right,_#000000_0%,_#000000_65%,_#ffffff_100%)] pl-1.5 pr-3 py-0.5 shadow-sm overflow-hidden">
+            <div className="bg-black rounded-full px-1 py-0.5">
               <Image
                 src="/logo.png"
                 alt="ClearDrive.lk Logo"
-                width={170}
-                height={60}
+                width={80}
+                height={32}
                 priority
               />
             </div>
@@ -23,7 +23,7 @@ export default function Navbar() {
 
         {/* Centered Nav Links with spacing */}
         <div className="flex-1 flex justify-center">
-          <div className="flex items-center gap-12 text-sm font-semibold">
+          <div className="flex items-center gap-8 text-xs font-semibold">
             <Link
               href="/how-it-works"
               className="text-black transition-colors duration-150 hover:text-[#FE7743] hover:border-b-2 hover:border-[#FE7743] pb-0.5"
