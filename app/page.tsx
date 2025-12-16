@@ -83,7 +83,7 @@ export default function HomePage() {
           >
             <div className="absolute inset-0 bg-gray-900">
                <Image 
-                  src="/pexels-albinberlin-919073.jpg"
+                  src="/pexelsCover.jpg"
                   alt="Premium Japanese Vehicle" 
                   fill 
                   className="object-cover" 
