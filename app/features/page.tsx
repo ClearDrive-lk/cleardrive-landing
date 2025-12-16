@@ -88,17 +88,13 @@ export default function FeaturesSection() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="inline-block mb-4 rounded-full bg-blue-100 px-4 py-1 text-sm font-semibold text-blue-700">
+          <span className="inline-block mb-4 rounded-full bg-[#FFE5D7] px-4 py-1 text-sm font-semibold text-[#FE7743]">
             Why ClearDrive
           </span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
             Import vehicles with
-            <span className="text-blue-600"> clarity & confidence</span>
+            <span className="text-[#FE7743]"> clarity & confidence</span>
           </h2>
-          <p className="mt-6 text-lg text-slate-600">
-            ClearDrive replaces brokers, paperwork, and uncertainty with a
-            single secure platform built for transparency, trust, and speed.
-          </p>
         </div>
 
         {/* Feature Grid */}
@@ -117,11 +113,11 @@ export default function FeaturesSection() {
                 variants={cardVariants}
                 className="group relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/20">
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#FE7743] text-white shadow-[0_10px_24px_rgba(254,119,67,0.2)]">
                   <Icon className="h-7 w-7" />
                 </div>
 
-                <h3 className="mt-6 text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                <h3 className="mt-6 text-xl font-bold text-slate-900 group-hover:text-[#FE7743] transition-colors">
                   {feature.title}
                 </h3>
 
@@ -129,7 +125,7 @@ export default function FeaturesSection() {
                   {feature.description}
                 </p>
 
-                <div className="absolute inset-x-0 bottom-0 h-1 rounded-b-2xl bg-gradient-to-r from-blue-500 to-indigo-500 opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="absolute inset-x-0 bottom-0 h-1 rounded-b-2xl bg-gradient-to-r from-[#FE7743] to-[#FF9A62] opacity-0 transition-opacity group-hover:opacity-100" />
               </motion.div>
             );
           })}
