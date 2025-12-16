@@ -25,6 +25,12 @@ export default function Navbar() {
         <div className="flex-1 flex justify-center">
           <div className="flex items-center gap-8 text-xs font-semibold">
             <Link
+              href="/"
+              className="text-black transition-colors duration-150 hover:text-[#FE7743] hover:border-b-2 hover:border-[#FE7743] pb-0.5"
+            >
+              Home
+            </Link>
+            <Link
               href="/how-it-works"
               className="text-black transition-colors duration-150 hover:text-[#FE7743] hover:border-b-2 hover:border-[#FE7743] pb-0.5"
             >
