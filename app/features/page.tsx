@@ -1,7 +1,5 @@
 "use client";
 
-"use client";
-
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -13,64 +11,52 @@ import {
   Ship,
 } from "lucide-react";
 
-
-interface Feature {
-  id: number;
-  title: string;
-  description: string;
-  icon: React.ElementType;
-}
-
-const features: Feature[] = [
+// --- DATA: Easy to edit, easy to explain ---
+const features = [
   {
     id: 1,
     title: "True Cost Transparency",
-    description:
-      "Know the exact landed cost before you bid. Our real-time calculator breaks down CIF, Customs Duty, PAL, and CESS with zero hidden fees.",
+    description: "Know the exact landed cost before you bid. Our real-time calculator breaks down CIF, Customs Duty, PAL, and CESS with zero hidden fees.",
     icon: Calculator,
   },
   {
     id: 2,
     title: "Direct Auction Access",
-    description:
-      "Browse verified Japanese auction listings directly and place bids with confidence using authentic auction sheets.",
+    description: "Browse verified Japanese auction listings directly and place bids with confidence using authentic auction sheets.",
     icon: Globe,
   },
   {
     id: 3,
     title: "Digital Customs Clearance",
-    description:
-      "Track customs clearance live with audited receipts, milestone updates, and full transparency from your assigned agent.",
+    description: "Track customs clearance live with audited receipts, milestone updates, and full transparency from your assigned agent.",
     icon: FileCheck,
   },
   {
     id: 4,
     title: "Integrated Financing",
-    description:
-      "Apply for leasing securely on the platform and receive approvals from trusted finance partners—no bank visits required.",
+    description: "Apply for leasing securely on the platform and receive approvals from trusted finance partners—no bank visits required.",
     icon: CreditCard,
   },
   {
     id: 5,
     title: "Verified Partners",
-    description:
-      "Every importer and clearing agent is carefully vetted through compliance checks and ongoing audits.",
+    description: "Every importer and clearing agent is carefully vetted through compliance checks and ongoing audits.",
     icon: ShieldCheck,
   },
   {
     id: 6,
     title: "End-to-End Tracking",
-    description:
-      "Monitor your vehicle journey from Japan to Sri Lanka with a single, real-time shipment dashboard.",
+    description: "Monitor your vehicle journey from Japan to Sri Lanka with a single, real-time shipment dashboard.",
     icon: Ship,
   },
 ];
 
+// --- ANIMATION SETTINGS (Standard Fade In) ---
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.12 },
+    transition: { staggerChildren: 0.1 }, // Cards appear one by one
   },
 };
 
@@ -81,20 +67,32 @@ const cardVariants = {
 
 export default function FeaturesSection() {
   return (
-    <section
-      id="features"
-      className="relative py-24 bg-gradient-to-b from-slate-50 to-white"
-    >
+    <section id="features" className="relative py-24 bg-black">
+      
+      {/* 1. SIMPLE BACKGROUND (Just a black section with a max-width container) */}
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="inline-block mb-4 rounded-full bg-[#FFE5D7] px-4 py-1 text-sm font-semibold text-[#FE7743]">
+        
+        {/* Header Section */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <motion.div 
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             className="inline-block mb-4 rounded-full bg-[#FE7743]/10 border border-[#FE7743]/20 px-4 py-1 text-sm font-semibold text-[#FE7743]"
+          >
             Why ClearDrive
-          </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
-            Import vehicles with
+          </motion.div>
+          
+          <motion.h2 
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             transition={{ delay: 0.1 }}
+             className="text-4xl md:text-5xl font-bold text-[#EFEEEA]"
+          >
+            Import vehicles with <br />
             <span className="text-[#FE7743]"> clarity & confidence</span>
-          </h2>
+          </motion.h2>
         </div>
 
         {/* Feature Grid */}
@@ -103,7 +101,7 @@ export default function FeaturesSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {features.map((feature) => {
             const Icon = feature.icon;
@@ -111,21 +109,25 @@ export default function FeaturesSection() {
               <motion.div
                 key={feature.id}
                 variants={cardVariants}
-                className="group relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                // CARD STYLING EXPLAINED:
+                // bg-[#0A0A0A]: Very dark grey (almost black) background
+                // border-white/10: Subtle white border
+                // hover:border-[#FE7743]: Border turns Orange on hover
+                // hover:-translate-y-2: Moves up slightly on hover
+                className="group relative rounded-2xl border border-white/10 bg-[#0A0A0A] p-8 transition-all duration-300 hover:border-[#FE7743] hover:-translate-y-2 hover:shadow-lg hover:shadow-orange-500/10"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#FE7743] text-white shadow-[0_10px_24px_rgba(254,119,67,0.2)]">
+                {/* Icon Box */}
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[#FE7743] text-black shadow-md">
                   <Icon className="h-7 w-7" />
                 </div>
 
-                <h3 className="mt-6 text-xl font-bold text-slate-900 group-hover:text-[#FE7743] transition-colors">
+                <h3 className="mb-3 text-xl font-bold text-[#EFEEEA] group-hover:text-[#FE7743] transition-colors">
                   {feature.title}
                 </h3>
 
-                <p className="mt-3 text-slate-600 leading-relaxed">
+                <p className="text-gray-400 text-sm leading-relaxed">
                   {feature.description}
                 </p>
-
-                <div className="absolute inset-x-0 bottom-0 h-1 rounded-b-2xl bg-gradient-to-r from-[#FE7743] to-[#FF9A62] opacity-0 transition-opacity group-hover:opacity-100" />
               </motion.div>
             );
           })}
