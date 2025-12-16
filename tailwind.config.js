@@ -9,7 +9,16 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        brand: {
+          orange: '#FE7743',   // Accent, Buttons
+          offwhite: '#EFEEEA', // Text on dark backgrounds
+          darkblue: '#273F4F', // Secondary backgrounds
+          black: '#000000',    // Main background
+        }
+      }
+    },
   },
   plugins: [],
 }
