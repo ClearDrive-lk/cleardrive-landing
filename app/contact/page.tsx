@@ -89,7 +89,7 @@ export default function Contact() {
             <div className="rounded-2xl overflow-hidden border border-white/10">
               <iframe
                 src="https://www.google.com/maps?q=Informatics+Institute+of+Technology+Colombo&output=embed"
-                className="w-full h-[260px]"
+                className="w-full h-[180px]"
                 loading="lazy"
               />
             </div>
