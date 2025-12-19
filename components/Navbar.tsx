@@ -35,9 +35,6 @@ export default function Navbar() {
                   priority
                 />
               </div>
-              <span className="font-bold text-3xl tracking-tight text-[#EFEEEA] group-hover:text-[#FE7743] transition-colors">
-                ClearDrive.lk
-              </span>
             </Link>
           </div>
 
