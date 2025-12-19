@@ -7,12 +7,12 @@ import { ShieldCheck, DollarSign, Globe, Users, Trophy, Target } from "lucide-re
 
 // --- DATA CONFIGURATION ---
 const teamMembers = [
-  { name: "Malith De Silva", role: "Founder CEO", image: "/team/malith.jpeg" },
-  { name: "Parindra Chameekara", role: "Operations Director", image: "/team/parindra.jpeg" },
-  { name: "Tharin De Silva", role: "Financial Analyst", image: "/team/tharin.jpeg" },
-  { name: "Lehan Methyuga", role: "Logistics Coordinator", image: "/team/lehan.png" },
-  { name: "Kalidu Indeera", role: "Technical Lead", image: "/team/kalidu.png" },
-  { name: "Pavara Mandara", role: "Customer Experience", image: "/team/pavara.jpeg" },
+  { name: "Malith De Silva", role: "Founder · Technical Lead", image: "/team/malith.jpeg" },
+  { name: "Parindra Chameekara", role: "Vehicle Data & Systems Engineer", image: "/team/parindra.jpeg" },
+  { name: "Tharin De Silva", role: "Workflow & Finance Systems Engineer", image: "/team/tharin.jpeg" },
+  { name: "Lehan Methyuga", role: "Frontend Lead Engineer", image: "/team/lehan.png" },
+  { name: "Kalidu Indeera", role: "Operations & Clearing Systems Engineer", image: "/team/kalidu.png" },
+  { name: "Pavara Mandara", role: "KYC & AI Integration Engineer", image: "/team/pavara.jpeg" },
 ];
 
 const missions = [

@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SnowOverlay from "@/components/SnowOverlay";
 
 export const metadata: Metadata = {
   title: "ClearDrive.lk – Transparent Vehicle Imports",
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-black text-[#EEEEEE] antialiased">
+        <SnowOverlay />
         <Navbar />
         {children}
         <Footer />
