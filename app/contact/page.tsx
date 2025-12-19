@@ -56,8 +56,20 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-
             {/* Info Card 2 */}
+                <div className="p-8 rounded-2xl bg-[#0A0A0A] border border-white/10 hover:border-[#FE7743]/50 transition-colors group">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-lg bg-[#FE7743]/10 text-[#FE7743] group-hover:bg-[#FE7743] group-hover:text-black transition-colors">
+                      <Phone className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-[#EFEEEA] mb-1">Call Us</h3>
+                      <p className="text-gray-400 text-sm mb-2">Talk directly with our support team.</p>
+                      <p className="text-[#EFEEEA]/80">+94 7X XXX XXXX</p>
+                    </div>
+                  </div>
+                </div>
+            {/* Info Card 3 */}
             <div className="p-8 rounded-2xl bg-[#0A0A0A] border border-white/10 hover:border-[#FE7743]/50 transition-colors group">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-lg bg-[#FE7743]/10 text-[#FE7743] group-hover:bg-[#FE7743] group-hover:text-black transition-colors">
@@ -73,8 +85,15 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-
-            {/* Info Card 3 */}
+            {/* Map */}
+            <div className="rounded-2xl overflow-hidden border border-white/10">
+              <iframe
+                src="https://www.google.com/maps?q=Informatics+Institute+of+Technology+Colombo&output=embed"
+                className="w-full h-[260px]"
+                loading="lazy"
+              />
+            </div>
+            {/* Info Card 5 */}
             <div className="p-8 rounded-2xl bg-[#0A0A0A] border border-white/10 hover:border-[#FE7743]/50 transition-colors group">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-lg bg-[#FE7743]/10 text-[#FE7743] group-hover:bg-[#FE7743] group-hover:text-black transition-colors">
@@ -125,14 +144,8 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
-                <div className="rounded-2xl overflow-hidden border border-white/10">
-                <iframe
-                  title="ClearDrive Location"
-                  src="https://www.google.com/maps?q=Informatics+Institute+of+Technology+Colombo&output=embed"
-                  className="w-full h-[280px]"
-                  loading="lazy"
-                />
-              </div>
+                
+              
 
                 {/* Email Input */}
                 <div className="space-y-2">
